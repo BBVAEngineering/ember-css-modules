@@ -141,6 +141,12 @@ console.log(styles['hello-class']);
 // => "_hello-class_1dr4n4"
 ```
 
+### Applying Classes inside component context
+
+All components will contain a property called [__styles__](./addon/mixins/component-mixin.js) that will be resolved with an object that holds the original and preprocessed CSS classNames.
+
+To improve the performance of your Ember components, you can use the attribute `context-class` (only inside Ember Components). This attribute matches the classNames without using the Ember container so it will be faster than using `local-class`.
+
 ### Applying Classes to a Component's Root Element
 
 There is no root element, if you are using either of the following:
